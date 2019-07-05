@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/all.js"></script>
+
+
+          <script>
+        $(function() {
+            setupLanguages(["bash","javascript"]);
+        });
+      </script>
+      </head>
+
+  <body class="">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+        <img src="images/tenor.gif" />
+                    <div class="lang-selector">
+                                  <a href="#" data-language-name="bash">bash</a>
+                                  <a href="#" data-language-name="javascript">javascript</a>
+                            </div>
+                            <div class="search">
+              <input type="text" class="search" id="input-search" placeholder="Search">
+            </div>
+            <ul class="search-results"></ul>
+              <div id="toc">
+      </div>
+                    <ul class="toc-footer">
+                                  <li><a href='http://github.com/mpociot/documentarian'>Bem Vindo A The Best API Forever</a></li>
+                            </ul>
+            </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+          <!-- START_INFO -->
+<h1>Micita Hare Danta API 1.0</h1>
+<p>" A Dança é uma arte"
+<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1663299718">Aqui a Dança Reina!</a></p>
+<!-- END_INFO -->
+<h1>general</h1>
+<!-- START_86e0ac5d4f8ce9853bc22fd08f2a0109 -->
+<h2>api/products</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/products" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/products");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": {
+        "current_page": 1,
+        "data": [
+            {
+                "id": 1,
+                "name": "Tyreek Stiedemann",
+                "price": 4.37,
+                "description": "Eum amet provident consectetur molestiae dignissimos. Exercitationem dignissimos velit est. Enim ut doloremque quia debitis et enim eligendi.",
+                "created_at": "2019-05-31 17:44:15",
+                "updated_at": "2019-05-31 17:44:15"
+            },
+            {
+                "id": 2,
+                "name": "Prof. Hershel Goldner",
+                "price": 6.01,
+                "description": "Sit nostrum id sapiente illo. Et optio saepe reprehenderit et quo. Reiciendis accusantium omnis architecto dolores aut omnis provident reprehenderit.",
+                "created_at": "2019-05-31 17:44:16",
+                "updated_at": "2019-05-31 17:44:16"
+            },
+            {
+                "id": 3,
+                "name": "Mr. Keyon Tillman",
+                "price": 4.64,
+                "description": "Et sed sed voluptatem et delectus. Fugit placeat ratione repellendus corporis. Impedit hic non quia quos. Laborum illo vel laborum nesciunt consequatur. Est aperiam molestias fugit laudantium.",
+                "created_at": "2019-05-31 17:44:16",
+                "updated_at": "2019-05-31 17:44:16"
+            },
+            {
+                "id": 4,
+                "name": "Damian Ortiz",
+                "price": 5.6899999999999995,
+                "description": "Inventore autem quam iusto ut. Et commodi dolor ut ab. Sed ad iure in earum et quae rerum autem. Molestiae corrupti iusto velit voluptatem.",
+                "created_at": "2019-05-31 17:44:16",
+                "updated_at": "2019-05-31 17:44:16"
+            },
+            {
+                "id": 5,
+                "name": "Kiana Predovic",
+                "price": 4.8,
+                "description": "Et eveniet nihil qui totam. Labore ab reprehenderit sint impedit qui ex. Ducimus quas odit velit iusto. Ab vel maiores est omnis. Ea nisi ab et et harum numquam.",
+                "created_at": "2019-05-31 17:44:16",
+                "updated_at": "2019-05-31 17:44:16"
+            }
+        ],
+        "first_page_url": "http:\/\/localhost\/api\/products?page=1",
+        "from": 1,
+        "last_page": 2,
+        "last_page_url": "http:\/\/localhost\/api\/products?page=2",
+        "next_page_url": "http:\/\/localhost\/api\/products?page=2",
+        "path": "http:\/\/localhost\/api\/products",
+        "per_page": 5,
+        "prev_page_url": null,
+        "to": 5,
+        "total": 10
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/products</code></p>
+<!-- END_86e0ac5d4f8ce9853bc22fd08f2a0109 -->
+<!-- START_d5a3d0c0add9ae4109a8d270310cf6c0 -->
+<h2>api/products/{id}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/products/1" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/products/1");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "id": {
+        "id": 1,
+        "name": "Tyreek Stiedemann",
+        "price": 4.37,
+        "description": "Eum amet provident consectetur molestiae dignissimos. Exercitationem dignissimos velit est. Enim ut doloremque quia debitis et enim eligendi.",
+        "created_at": "2019-05-31 17:44:15",
+        "updated_at": "2019-05-31 17:44:15"
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/products/{id}</code></p>
+<!-- END_d5a3d0c0add9ae4109a8d270310cf6c0 -->
+<!-- START_05b4383f00fd57c4828a831e7057e920 -->
+<h2>api/products</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/api/products" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/products");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/products</code></p>
+<!-- END_05b4383f00fd57c4828a831e7057e920 -->
+<!-- START_241fd2204f9f5b65c7aa7c9618dcca22 -->
+<h2>api/products/{id}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT "http://localhost/api/products/1" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/products/1");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/products/{id}</code></p>
+<!-- END_241fd2204f9f5b65c7aa7c9618dcca22 -->
+<!-- START_160dac2b00e86335715987c6d1c1f3eb -->
+<h2>api/products/{id}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE "http://localhost/api/products/1" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/products/1");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/products/{id}</code></p>
+<!-- END_160dac2b00e86335715987c6d1c1f3eb -->
+      </div>
+      <div class="dark-box">
+                        <div class="lang-selector">
+                                    <a href="#" data-language-name="bash">bash</a>
+                                    <a href="#" data-language-name="javascript">javascript</a>
+                              </div>
+                </div>
+    </div>
+  </body>
+</html>
