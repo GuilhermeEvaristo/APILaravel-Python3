@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::namespace('Api')->name('api.')->group(function () {
-    Route::prefix('produtos')->group(function(){
+    Route::prefix('bandas')->group(function(){
         Route::get('/','ProductController@index')->name('index');
         Route::get('/{id}','ProductController@show')->name('show');
         Route::post('/','ProductController@store')->name('store');

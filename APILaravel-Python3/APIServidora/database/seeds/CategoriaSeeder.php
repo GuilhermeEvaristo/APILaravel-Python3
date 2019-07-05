@@ -11,8 +11,8 @@ class CategoriaSeeder extends Seeder
      */
     public function run()
     {
-        Categoria::create(['name'=>'Comida']);
-        Categoria::create(['name'=>'Bebida']);
-        Categoria::create(['name'=>'Sobremesa']);
+        Categoria::create(['name'=>'Gospel']);
+        Categoria::create(['name'=>'Sertanejo']);
+        Categoria::create(['name'=>'Funk']);
     }
 }
